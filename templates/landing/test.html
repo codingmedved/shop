@@ -1,0 +1,598 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Marco - Bootstrap Landing Page</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,500,500italic">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/media-queries.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+    </head>
+
+    <body>
+
+        <!-- Loader -->
+    	<div class="loader">
+    		<div class="loader-img"></div>
+    	</div>
+
+        <!-- Top content -->
+        <div class="top-content">
+
+        	<!-- Top menu -->
+			<nav class="navbar navbar-inverse navbar-no-bg" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="index.html">Marco - Bootstrap Landing Page</a>
+					</div>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="top-navbar-1">
+						<ul class="nav navbar-nav navbar-right">
+							<li><a class="scroll-link" href="#features">Features</a></li>
+							<li><a class="scroll-link" href="#testimonials">Testimonials</a></li>
+							<li><a class="scroll-link" href="#pricing">Price</a></li>
+							<li><a class="scroll-link" href="#how-it-works">How it works</a></li>
+							<li><a class="scroll-link" href="#about-us">About</a></li>
+							<li><a class="scroll-link" href="#contact">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+
+            <div class="inner-bg">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text">
+                            <h1 class="wow fadeInLeftBig">Begin Using Our Product Today</h1>
+                            <div class="description wow fadeInLeftBig">
+                            	<p>
+	                            	Subscribe by entering your email address in the form below and we'll send you a link to start right away.
+	                            	Working MailChimp form!
+                            	</p>
+                            </div>
+                            <div class="subscribe wow fadeInUp">
+	                			<form class="form-inline" role="form" action="assets/subscribe.php" method="post">
+			                    	<div class="form-group">
+			                    		<label class="sr-only" for="subscribe-email">Email address</label>
+			                        	<input type="text" name="email" placeholder="Enter your email..." class="subscribe-email form-control" id="subscribe-email">
+			                        </div>
+			                        <button type="submit" class="btn">Subscribe</button>
+			                    </form>
+			                    <div class="success-message"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+	                	<div class="col-sm-8 col-sm-offset-2 top-video-link medium-paragraph wow fadeInUp">
+	                		<a href="#" class="launch-modal" data-modal-id="modal-how-it-works">
+		                		<span class="top-video-link-icon"><i class="fa fa-play"></i></span>
+		            			<span class="top-video-link-text">See how it works</span>
+	                		</a>
+	                	</div>
+	                </div>
+
+	                <div class="row">
+	                	<div class="col-sm-12 top-social wow fadeInUp">
+	                		<a href="#"><i class="fa fa-facebook"></i></a> <span class="divider-2"></span>
+							<a href="#"><i class="fa fa-twitter"></i></a> <span class="divider-2"></span>
+							<a href="#"><i class="fa fa-google-plus"></i></a> <span class="divider-2"></span>
+							<a href="#"><i class="fa fa-instagram"></i></a> <span class="divider-2"></span>
+							<a href="#"><i class="fa fa-pinterest"></i></a>
+	                	</div>
+	                </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Features -->
+        <div class="features-container section-container">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-sm-12 features section-description wow fadeIn">
+	                    <h2>Features</h2>
+	                    <div class="divider-1 wow fadeInUp"><span></span></div>
+	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+	                    	Ut wisi enim ad minim veniam, quis nostrud tempor incididunt ut labore et.</p>
+	                </div>
+	            </div>
+	            <div class="row">
+                	<div class="col-sm-4 features-box wow fadeInUp">
+	                	<div class="features-box-icon"><i class="fa fa-eye"></i></div>
+	                    <h3>Easy To Use</h3>
+	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                    </div>
+                    <div class="col-sm-4 features-box wow fadeInDown">
+	                	<div class="features-box-icon"><i class="fa fa-thumbs-up"></i></div>
+	                    <h3>Responsive Design</h3>
+	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                    </div>
+                    <div class="col-sm-4 features-box wow fadeInUp">
+	                	<div class="features-box-icon"><i class="fa fa-cog"></i></div>
+	                    <h3>Bootstrap Engine</h3>
+	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                    </div>
+	            </div>
+	            <div class="row">
+                	<div class="col-sm-4 features-box wow fadeInUp">
+	                	<div class="features-box-icon"><i class="fa fa-play"></i></div>
+	                    <h3>Lots Of Videos</h3>
+	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                    </div>
+                    <div class="col-sm-4 features-box wow fadeInDown">
+	                	<div class="features-box-icon"><i class="fa fa-phone"></i></div>
+	                    <h3>Mobile App</h3>
+	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                    </div>
+                    <div class="col-sm-4 features-box wow fadeInUp">
+	                	<div class="features-box-icon"><i class="fa fa-commenting"></i></div>
+	                    <h3>Big Community</h3>
+	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                    </div>
+	            </div>
+	            <div class="row">
+	            	<div class="col-sm-12 section-bottom-button wow fadeInUp">
+                        <a class="btn btn-link-1 scroll-link" href="#pricing">Plans &amp; Pricing</a>
+	            	</div>
+	            </div>
+	        </div>
+        </div>
+
+		<!-- More features 2 -->
+        <div class="more-features-2-container section-container section-container-gray-bg">
+	        <div class="container">
+	            <div class="row">
+	            	<div class="col-sm-7 more-features-2-box wow fadeInLeft">
+	                    <img src="assets/img/devices/ipad.png" alt="">
+	                </div>
+	                <div class="col-sm-5 more-features-2-box more-features-2-box-right wow fadeInUp">
+	                	<h3>We have more features for you:</h3>
+	                	<ul>
+	                		<li><i class="fa fa-check-circle"></i> 15+ Layouts</li>
+	                		<li><i class="fa fa-check-circle"></i> 30+ Forms (registration, login, contact &amp; subscription forms)</li>
+	                		<li><i class="fa fa-check-circle"></i> Responsive Layout</li>
+	                		<li><i class="fa fa-check-circle"></i> Bootstrap Framework</li>
+	                		<li><i class="fa fa-check-circle"></i> MailChimp Subscription Form</li>
+	                	</ul>
+	                	<a class="btn btn-link-1 scroll-link" href="#pricing">See Pricing</a>
+	                </div>
+	            </div>
+	        </div>
+        </div>
+
+        <!-- Many options -->
+        <div class="many-options-container section-container">
+	        <div class="container">
+	            <div class="row">
+	            	<div class="col-sm-5 many-options-box wow fadeInLeft">
+	                    <h3>Many options to choose from:</h3>
+                    	<p>
+                    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+                    		Ut wisi enim ad minim veniam, quis nostrud.
+                    	</p>
+                    	<p>
+                    		Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                    		Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl.
+                    	</p>
+                    	<p>
+                    		<a class="learn-more scroll-link" href="#features">Learn More</a>
+                    	</p>
+	                </div>
+	                <div class="col-sm-7 many-options-box many-options-box-right wow fadeInUp">
+	                    <img src="assets/img/devices/ipad2.png" alt="">
+	                </div>
+	            </div>
+	        </div>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="testimonials-container section-container section-container-image-bg">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-sm-12 testimonials section-description wow fadeIn">
+	                	<h2>Testimonials</h2>
+	                	<div class="divider-1 wow fadeInUp"><span></span></div>
+	                    <p>Take a look below to read what our clients have said about us:</p>
+	                </div>
+	            </div>
+	            <div class="row">
+	                <div class="col-sm-10 col-sm-offset-1 testimonial-list wow fadeInUp">
+	                	<div role="tabpanel">
+	                		<!-- Tab panes -->
+	                		<div class="tab-content">
+	                			<div role="tabpanel" class="tab-pane fade in active" id="tab1">
+	                				<div class="testimonial-image">
+	                					<img src="assets/img/testimonials/1.jpg" alt="" data-at2x="assets/img/testimonials/1.jpg">
+	                				</div>
+	                				<div class="testimonial-text">
+	                					<h3>5 / 5 Stars</h3>
+		                                <p>
+		                                	"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+		                                	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+		                                	Lorem ipsum dolor sit amet, consectetur..."<br>
+		                                	<a href="#">Lorem Ipsum, dolor.co.uk</a>
+		                                </p>
+	                                </div>
+	                			</div>
+	                			<div role="tabpanel" class="tab-pane fade" id="tab2">
+	                				<div class="testimonial-image">
+	                					<img src="assets/img/testimonials/2.jpg" alt="" data-at2x="assets/img/testimonials/2.jpg">
+	                				</div>
+	                				<div class="testimonial-text">
+	                					<h3>4 / 5 Stars</h3>
+		                                <p>
+		                                	"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
+		                                	ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+		                                	lobortis nisl ut aliquip ex ea commodo consequat..."<br>
+		                                	<a href="#">Minim Veniam, nostrud.com</a>
+		                                </p>
+	                                </div>
+	                			</div>
+	                			<div role="tabpanel" class="tab-pane fade" id="tab3">
+	                				<div class="testimonial-image">
+	                					<img src="assets/img/testimonials/3.jpg" alt="" data-at2x="assets/img/testimonials/3.jpg">
+	                				</div>
+	                				<div class="testimonial-text">
+	                					<h3>5 / 5 Stars</h3>
+		                                <p>
+		                                	"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+		                                	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+		                                	Lorem ipsum dolor sit amet, consectetur..."<br>
+		                                	<a href="#">Lorem Ipsum, dolor.co.uk</a>
+		                                </p>
+	                                </div>
+	                			</div>
+	                			<div role="tabpanel" class="tab-pane fade" id="tab4">
+	                				<div class="testimonial-image">
+	                					<img src="assets/img/testimonials/4.jpg" alt="" data-at2x="assets/img/testimonials/4.jpg">
+	                				</div>
+	                				<div class="testimonial-text">
+	                					<h3>4 / 5 Stars</h3>
+		                                <p>
+		                                	"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
+		                                	ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+		                                	lobortis nisl ut aliquip ex ea commodo consequat..."<br>
+		                                	<a href="#">Minim Veniam, nostrud.com</a>
+		                                </p>
+	                                </div>
+	                			</div>
+	                		</div>
+	                		<!-- Nav tabs -->
+	                		<ul class="nav nav-tabs" role="tablist">
+	                			<li role="presentation" class="active">
+	                				<a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab"></a>
+	                			</li>
+	                			<li role="presentation">
+	                				<a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab"></a>
+	                			</li>
+	                			<li role="presentation">
+	                				<a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab"></a>
+	                			</li>
+	                			<li role="presentation">
+	                				<a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab"></a>
+	                			</li>
+	                		</ul>
+	                	</div>
+	                </div>
+	            </div>
+	        </div>
+        </div>
+
+        <!-- Pricing -->
+        <div class="pricing-container section-container">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-sm-12 pricing section-description wow fadeIn">
+	                    <h2>Plans &amp; Pricing</h2>
+	                    <div class="divider-1 wow fadeInUp"><span></span></div>
+	                    <p>Here are our plans &amp; pricing, choose the package you like most.</p>
+	                </div>
+	            </div>
+	            <div class="row">
+                	<div class="col-sm-4 pricing-box wow fadeInUp">
+                		<div class="pricing-box-inner">
+                			<h3>Basic</h3>
+		                	<div class="pricing-box-price"><span><sup>$</sup> </span><strong>12</strong><span> / month</span></div>
+		                    <div class="pricing-box-features">
+		                    	<ul>
+		                    		<li>1000 video lessons</li>
+		                    		<li>Normal speed</li>
+		                    		<li>500 solved exercises</li>
+		                    		<li>300MB to save your code</li>
+		                    		<li>750 hours of support</li>
+		                    	</ul>
+		                    </div>
+		                    <div class="pricing-box-sign-up">
+		                    	<a class="btn btn-link-1 scroll-link" href="#top-content">Start Now</a>
+		                    </div>
+	                    </div>
+                    </div>
+                    <div class="col-sm-4 pricing-box wow fadeInDown">
+                    	<div class="pricing-box-inner">
+                    		<h3>Ultimate</h3>
+		                	<div class="pricing-box-price"><span><sup>$</sup> </span><strong>35</strong><span> / month</span></div>
+		                    <div class="pricing-box-features">
+		                    	<ul>
+		                    		<li>3000 video lessons</li>
+		                    		<li>2x speed</li>
+		                    		<li>2000 solved exercises</li>
+		                    		<li>500MB to save your code</li>
+		                    		<li>900 hours of support</li>
+		                    	</ul>
+		                    </div>
+		                    <div class="pricing-box-sign-up">
+		                    	<a class="btn btn-link-1 scroll-link" href="#top-content">Start Now</a>
+		                    </div>
+		                </div>
+                    </div>
+                    <div class="col-sm-4 pricing-box wow fadeInUp">
+                    	<div class="pricing-box-inner">
+                    		<h3>Platinum</h3>
+		                	<div class="pricing-box-price"><span><sup>$</sup> </span><strong>75</strong><span> / month</span></div>
+		                    <div class="pricing-box-features">
+		                    	<ul>
+		                    		<li>5000 video lessons</li>
+		                    		<li>4x speed</li>
+		                    		<li>4000 solved exercises</li>
+		                    		<li>900MB to save your code</li>
+		                    		<li>Unlimited hours of support</li>
+		                    	</ul>
+		                    </div>
+		                    <div class="pricing-box-sign-up">
+		                    	<a class="btn btn-link-1 scroll-link" href="#top-content">Start Now</a>
+		                    </div>
+		                </div>
+                    </div>
+	            </div>
+	        </div>
+        </div>
+
+        <!-- How it works -->
+        <div class="how-it-works-container section-container section-container-image-bg">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-sm-12 how-it-works section-description wow fadeIn">
+	                    <h2>Ready In 4 Steps</h2>
+	                    <div class="divider-1 wow fadeInUp"><span></span></div>
+	                    <p>
+	                    	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+	                    	Ut wisi enim ad minim veniam, quis nostrud tempor incididunt ut labore et.
+	                    </p>
+	                </div>
+	            </div>
+	            <div class="row">
+                	<div class="col-sm-4 col-sm-offset-1 how-it-works-box wow fadeInUp">
+	                	<div class="how-it-works-step">1</div>
+	                    <h3>Sign Up</h3>
+	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                    </div>
+                    <div class="col-sm-4 col-sm-offset-2 how-it-works-box wow fadeInDown">
+	                	<div class="how-it-works-step">2</div>
+	                    <h3>Make Payment</h3>
+	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-1 how-it-works-box wow fadeInUp">
+	                	<div class="how-it-works-step">3</div>
+	                    <h3>Log In</h3>
+	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                    </div>
+                    <div class="col-sm-4 col-sm-offset-2 how-it-works-box wow fadeInDown">
+	                	<div class="how-it-works-step">4</div>
+	                    <h3>Start Using It</h3>
+	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                    </div>
+	            </div>
+	            <div class="row">
+	            	<div class="col-sm-12 section-bottom-button wow fadeInUp">
+                        <a class="btn btn-link-1 scroll-link" href="#pricing">Our Prices</a>
+	            	</div>
+	            </div>
+	        </div>
+        </div>
+
+		<!-- About us -->
+        <div class="about-us-container section-container">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-sm-5 about-us-box wow fadeInLeft">
+	                    <img src="assets/img/about/1.jpg" alt="" data-at2x="assets/img/about/1.jpg">
+	                </div>
+	                <div class="col-sm-6 col-sm-offset-1 about-us-box about-us-box-right wow fadeInUp">
+	                    <h3>Let's grow our business together!</h3>
+                    	<p>
+                    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+                    		Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper.
+                    	</p>
+                    	<p>
+                    		Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                    		Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl.
+                    	</p>
+                    	<p>
+                    		<a class="learn-more" href="#">Learn More</a>
+                    	</p>
+	                </div>
+	            </div>
+	        </div>
+        </div>
+
+        <!-- Call to action -->
+        <div class="call-to-action-container section-container section-container-image-bg">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-sm-12 call-to-action section-description wow fadeInLeftBig">
+	                    <h2>Call To Action</h2>
+	                    <div class="divider-1 wow fadeInUp"><span></span></div>
+	                    <p>
+	                    	Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+	                    	aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud.
+	                    </p>
+	                </div>
+	            </div>
+	            <div class="row">
+	            	<div class="col-sm-12 section-bottom-button wow fadeInUp">
+                        <a class="btn btn-link-1 scroll-link" href="#pricing">Choose Your Package</a>
+	            	</div>
+	            </div>
+	        </div>
+        </div>
+
+        <!-- Contact us -->
+		<div class="contact-container section-container">
+	        <div class="container">
+	            <div class="row">
+	            	<div class="col-sm-6 col-sm-offset-3 contact-box wow fadeInUp">
+
+	                    <div class="contact-top">
+                    		<div class="contact-top-left">
+                    			<h3>Contact Us</h3>
+								<p>Fill in the form below to contact us:</p>
+                    		</div>
+                    		<div class="contact-top-right">
+                    			<i class="fa fa-envelope"></i>
+                    		</div>
+                        </div>
+                        <div class="contact-bottom">
+		                    <form role="form" action="assets/contact.php" method="post">
+		                    	<div class="form-group">
+		                    		<label for="contact-email">Email: <span class="contact-error"></span></label>
+		                        	<input type="text" name="email" placeholder="Your email address..." class="contact-email form-control" id="contact-email">
+		                        </div>
+		                        <div class="form-group">
+		                        	<label for="contact-subject">Subject: <span class="contact-error"></span></label>
+		                        	<input type="text" name="subject" placeholder="Message subject..." class="contact-subject form-control" id="contact-subject">
+		                        </div>
+		                        <div class="form-group">
+		                        	<label for="contact-message">Message: <span class="contact-error"></span></label>
+		                        	<textarea name="message" placeholder="Message text..." class="contact-message form-control" id="contact-message"></textarea>
+		                        </div>
+		                        <button type="submit" class="btn">Send Message</button>
+		                    </form>
+	                    </div>
+
+	                </div>
+	            </div>
+	        </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+	        <div class="container">
+	        	<div class="row">
+	        		<div class="col-sm-4 footer-about wow fadeInUp">
+	        			<h3>About Us</h3>
+	        			<p>
+	        				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+	        				Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper.
+	        			</p>
+	        			<p>
+                    		<a class="scroll-link" href="#about-us">Learn More</a>
+                    	</p>
+                    </div>
+	        		<div class="col-sm-4 footer-contact-info wow fadeInDown">
+	        			<h3>Contact Info</h3>
+	                	<p><i class="fa fa-map-marker"></i> Via Rossini 10, 10136 Turin Italy</p>
+	                	<p><i class="fa fa-phone"></i> Phone: (0039) 333 12 68 347</p>
+	                	<p><i class="fa fa-envelope"></i> Email: <a href="mailto:contact.azmind@gmail.com">contact.azmind@gmail.com</a></p>
+	                	<p><i class="fa fa-skype"></i> Skype: marco_online</p>
+                    </div>
+                    <div class="col-sm-4 footer-social wow fadeInUp">
+                    	<h3>We're Social</h3>
+                    	<p>
+	                    	<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-google-plus"></i></a>
+							<a href="#"><i class="fa fa-instagram"></i></a>
+							<a href="#"><i class="fa fa-pinterest"></i></a>
+						</p>
+                    </div>
+	            </div>
+	            <div class="row">
+           			<div class="col-sm-6 footer-copyright">
+                    	&copy; Marco Bootstrap Template by <a href="http://azmind.com">AZMIND</a>
+                    </div>
+           			<div class="col-sm-6 footer-menu">
+                    	<ul>
+                    		<li><a class="scroll-link" href="#top-content">Top</a></li>
+							<li><a class="scroll-link" href="#features">Features</a></li>
+							<li><a class="scroll-link" href="#pricing">Price</a></li>
+							<li><a href="#">Terms</a></li>
+							<li><a href="#">Privacy</a></li>
+						</ul>
+                    </div>
+           		</div>
+	        </div>
+        </footer>
+
+
+        <!-- MODAL: How it works -->
+        <div class="modal fade" id="modal-how-it-works" tabindex="-1" role="dialog" aria-labelledby="modal-how-it-works-label" aria-hidden="true">
+        	<div class="modal-dialog">
+        		<div class="modal-content">
+        			<div class="modal-header">
+        				<button type="button" class="close" data-dismiss="modal">
+        					<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+        				</button>
+        			</div>
+        			<div class="modal-body">
+        				<div class="modal-video">
+	        				<div class="embed-responsive embed-responsive-16by9">
+			                    <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/84910153?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=42bfc2"
+			                    			webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			                </div>
+		                </div>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+
+
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/retina-1.1.0.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+
+        <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+
+    </body>
+
+</html>
