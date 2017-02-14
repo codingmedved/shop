@@ -9,7 +9,7 @@ html, body{
 }
 
 .general-container{
-    background: url('img/bg_image.jpg');
+    background: url('../img/bg_image.jpg');
     height: 100%;
 }
 
@@ -38,6 +38,3 @@ html, body{
     font-weight: 100;
     line-height: 50px;
 }
-
-
-
