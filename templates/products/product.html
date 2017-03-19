@@ -50,6 +50,25 @@
                         <div role="tabpanel" class="tab-pane" id="settings">...</div>
                       </div>
                 </div>
+                <div>
+                    <form id="form_buying_product" class="form-inline">
+                        <div class="form-group">
+                             <input type="number" class="form-control" name="number" id="number">
+                        </div>
+
+
+                            <div class="form-group">
+                                <button type="submit" id="submit_btn" class="btn btn-success btn-buy"
+                                    data-product_id = "{{ product.id }}"
+                                    data-name ="{{ product.name }}"
+                                    data-price ="{{ product.price }}"
+                                >
+                                    Купить
+                                </button>
+                            </div>
+
+                    </form>
+                </div>
             </div>
         </div>
     </div>

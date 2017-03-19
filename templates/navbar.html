@@ -1,5 +1,8 @@
 <!-- Static navbar -->
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-default navbar-top">
+        df
+    </nav>
+    <nav class="navbar navbar-default navbar-main">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -29,9 +32,17 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="../navbar/">Default</a></li>
-            <li class="active"><a href="./">Static top <span class="sr-only">(current)</span></a></li>
-            <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+            <li>
+                <div class="basket-container">
+                    <a href="{% url 'basket' %}">Корзина <span id="basket_total_amount"></span></a>
+                    <div class="basket-items hidden">
+                        <ul class="">
+                            <li>wewe</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+
           </ul>
         </div><!--/.nav-collapse -->
       </div>

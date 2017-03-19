@@ -80,3 +80,32 @@ html, body{
     padding: 5px;
     margin-bottom: 5px;
 }
+
+.navbar-top{
+    min-height: 10px;
+    height: 20px;
+    background-color: green;
+    border: none;
+    border-radius: 0;
+}
+
+.navbar-main{
+    background-color: #55e073;
+    border: none;
+    border-radius: 0;
+}
+
+.basket-container{
+    position: relative;
+    width: 400px;
+    padding: 15px 10px;
+}
+
+.basket-items{
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    background-color: #55e093;
+    z-index: 10;
+    padding: 10px;
+}
