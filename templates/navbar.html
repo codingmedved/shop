@@ -50,6 +50,11 @@
                                     <a class="delete-item" href="" data-product_id="{{ product_in_basket.id }}">x</a>
                                 </li>
                             {% endfor %}
+                            <li>
+                                <a href="{% url 'checkout'  %}">
+                                    Оформить заказ
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>

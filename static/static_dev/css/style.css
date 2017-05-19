@@ -109,3 +109,7 @@ html, body{
     z-index: 10;
     padding: 10px;
 }
+
+.form-error{
+    color: red;
+}
