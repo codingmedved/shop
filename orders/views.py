@@ -1,4 +1,4 @@
-from django.http import JsonResponse, HttpResponse
+from django.http import JsonResponse, HttpResponse, HttpResponseRedirect
 from .models import *
 from django.shortcuts import render
 from .forms import CheckoutContactForm
@@ -77,7 +77,7 @@ def checkout(request):
                                                   total_price = product_in_basket.total_price,
                                                   order=order)
 
-            return HttpResponse(request.META.HTTP_REFERER)
+            return HttpResponseRedirect(request.META['HTTP_REFERER'])
         else:
             print("no")
     return render(request, 'orders/checkout.html', locals())
