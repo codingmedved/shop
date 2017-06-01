@@ -7,7 +7,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'db1',
         'USER': 'django_shop',
-        'PASSWORD': 'djangoshop12#$',
+        'PASSWORD': 'django_shop_test',
         'HOST': 'localhost',
         'PORT': '',                      # Set to empty string for default.
     }
