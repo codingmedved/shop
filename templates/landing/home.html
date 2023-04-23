@@ -1,42 +1,38 @@
 {% extends 'base.html' %}
 {% load static %}
 
-
 {% block content %}
     <div class="section-top">
-        <img src="{% static 'img/slider0.jpg' %}" class="img-responsive">
+        <img src="{% static 'img/slider0.jpg' %}" class="img-responsive" alt="">
     </div>
     <div class="section section1">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="text-center">
-                        Новые поступления
+                        New arrivals
                     </h1>
                 </div>
-                {% for product_image in products_images %}
+                {% for product_image in products_images|slice:':4' %}
                     {% include 'landing/product_item.html' %}
                 {% endfor %}
             </div>
         </div>
     </div>
-    <div class="section section-delivery">
-        <div>
-            <h3>Free shipping</h3>
-        </div>
+    <div class="section-delivery">
+        <h1 class="text-center">Free Shipping</h1>
     </div>
     <div class="section section2 phones-container">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="text-center">
-                        Телефоны
+                        New Phones
                     </h1>
                 </div>
-                {% for product_image in products_images_phones %}
+                {% for product_image in products_images_phones|slice:':4' %}
                     {% include 'landing/product_item.html' %}
                 {% endfor %}
-
             </div>
         </div>
     </div>
@@ -45,13 +41,12 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="text-center">
-                        Ноутбуки
+                        New Laptops
                     </h1>
                 </div>
-                {% for product_image in products_images_laptops %}
+                {% for product_image in products_images_laptops|slice:':4' %}
                     {% include 'landing/product_item.html' %}
                 {% endfor %}
-
             </div>
         </div>
     </div>

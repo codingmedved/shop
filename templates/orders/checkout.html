@@ -1,90 +1,74 @@
 {% extends 'base.html' %}
 {% load static %}
 
-
 {% block content %}
     <div class="container">
         <div class="row">
-            {% if products_in_basket %}
+            {% if products_in_cart %}
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h3 class="text-center">Товары в корзине</h3>
-                    <h5 class="text-center">Общая стоимость: {{ request.session.basket.total_amount }} грн </h5>
-                            {{ request.session.basket.products }}
-
-                    <form class="form-horizontal" method="post">{% csrf_token %}
-
+                    <h3 class="text-center">Products in Cart:</h3>
+                    <h5 class="text-center">Total cost:</h5>
+                    <form class="form-horizintal" method="post" action="">
+                        {% csrf_token %}
+                        <div class="col-lg-4">
                             <div class="form-group">
-                                <div class="col-lg-4">
-                                    <label>Имя</label>
-                                    <span class="form-error">{{ form.name.errors }}</span>
-                                    <input type="text" name="{{ form.name.html_name }}" class="form-control"
-                                        value="{{ request.POST.name }}"
-                                    >
-                                </div>
+                                <label for="">Name:</label>
+                                <span class="form-error">{{ form.name.errors }}</span>
+                                <input type="text" name="{{ form.name.html_name }}" id="" class="form-control"
+                                       value="{{ request.POST.name }}">
                             </div>
+                        </div>
 
+                        <div class="col-lg-4">
                             <div class="form-group">
-                                <div class="col-lg-4">
-                                     <label>Телефон</label>
-                                     <span class="form-error">{{ form.phone.errors }}</span>
-                                    <input type="text" name="{{ form.phone.html_name }}" class="form-control"
-                                        value="{{ request.POST.phone }}"
-                                    >
-                                </div>
+                                <label for="">Phone:</label>
+                                <span class="form-error">{{ form.phone.errors }}</span>
+                                <input type="text" name="{{ form.phone.html_name }}" id="" class="form-control"
+                                       value="{{ request.POST.phone }}">
                             </div>
-
+                        </div>
 
                         <table class="table text-center">
                             <thead>
-                                <tr>
-                                    <th>Название товара</th>
-                                    <th>Количество</th>
-                                    <th>Цена за еденицу</th>
-                                    <th>Общая цена</th>
-                                </tr>
+                            <tr>
+                                <td>Product name</td>
+                                <td>Quantity</td>
+                                <td>Price per item</td>
+                                <td>Total price</td>
+                            </tr>
                             </thead>
                             <tbody>
-                                {% for product_in_basket in products_in_basket %}
-                                    <tr>
-                                        <td>
-                                             {{ product_in_basket.product.name }}
-                                        </td>
-                                        <td>
-                                             <input value="{{ product_in_basket.nmb }}" type="number"
-                                                    class="product-in-basket-nmb" name="product_in_basket_{{ product_in_basket.id }}">
-                                        </td>
-                                        <td>
-                                            <span class="product-price">
-                                                {{ product_in_basket.price_per_item}}
-                                            </span>
-                                        </td>
-                                        <td>
-                                            <span class="total-product-in-basket-amount">
-                                                {{ product_in_basket.total_price }}
-                                            </span>
-                                        </td>
-                                    </tr>
-                                {% endfor %}
+                            {% for product_in_cart in products_in_cart %}
+                                <tr>
+                                    <td>{{ product_in_cart.product.name }}</td>
+                                    <td><input name="product_{{ product_in_cart.id }}"
+                                               value="{{ product_in_cart.number }}"
+                                               type="number"
+                                               class="product_number_in_cart"></td>
+                                    <td><span class="product_price_in_cart">{{ product_in_cart.price_per_item }}</span>
+                                    </td>
+                                    <td><span
+                                            class="total_product_price_in_cart">{{ product_in_cart.total_price }}</span>
+                                    </td>
+                                </tr>
+                            {% endfor %}
                             </tbody>
                         </table>
-
                         <div class="text-right">
-                            <b>Сумма заказа: </b> <span id="total_order_amount">54</span>
+                            <hr class="checkout-total-price">
+                            <h3>Order total Price: <span id="total_order_amount"></span></h3>
+                            <br>
                         </div>
-
-                        <hr>
-
                         <div class="text-right">
-                            <button type="submit" class="btn btn-primary btn-lg">Заказать</button>
+                            <button type="submit" class="btn btn-primary btn-lg">CHECKOUT</button>
                         </div>
-
                     </form>
-
                 </div>
-             {% else %}
-                <h3 class="text-center">В Вашей корзине нет товаров</h3>
+            {% else %}
+                <h3>Cart is Empty</h3>
             {% endif %}
 
         </div>
     </div>
+
 {% endblock %}

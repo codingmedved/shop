@@ -1,41 +1,38 @@
 {% load static %}
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
 
-    <!-- Bootstrap-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    {#    <link rel="preconnect" href="https://fonts.googleapis.com">#}
+    {#    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>#}
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400" rel="stylesheet">
-
-    <!-- Custom styles -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-
+    <title>Document</title>
 </head>
 <body>
 
-    <div class="wrapper">
-        <div class="wrapper-content">
-            {% include 'navbar.html' %}
+<div class="wrapper">
+    <div class="wrapper-content">
+        {% include 'navbar.html' %}
 
-            {% block content %}
-            {% endblock content %}
-        </div>
-
+        {% block content %}
+        {% endblock %}
     </div>
 
-     {% include 'footer.html' %}
+</div>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+{% include 'footer.html' %}
 
-    <script src="{% static 'js/scripts.js' %}"></script>
-
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="{% static 'js/scripts.js' %}"></script>
 </body>
 </html>

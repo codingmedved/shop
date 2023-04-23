@@ -1,53 +1,54 @@
 {% load static %}
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
 
-    <!-- Bootstrap-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    {#    <link rel="preconnect" href="https://fonts.googleapis.com">#}
+    {#    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>#}
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400" rel="stylesheet">
-
-    <!-- Custom styles -->
     <link rel="stylesheet" href="{% static 'css/landing.css' %}">
 
-
+    <title>Document</title>
 </head>
 <body>
 
-    <div class="general-container">
-        <div class="container top-container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h1 class="title">Наш магазин скоро откроется!<br>
-                    Оставляйте Ваш имейл в форме ниже</h1>
-                    <div>
-                        <form action="" method="post" class="form-inline text-center">{% csrf_token %}
-                         <div class="form-group">
-                             <label>Ваш имейл: </label>
-                             <input name="{{ form.email.name }}" class="form-control">
-                         </div>
-                         <div class="form-group">
-                             <label>Ваше имя: </label>
-                             <input name="{{ form.name.name }}" class="form-control">
-                         </div>
-                         <button type="submit" class="btn btn-primary btn-orange">Отправить</button>
-                        </form>
+<div class="general-container">
+    <div class="container top-container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2 class="text-center glow">Our store will be opened soon</h2>
+                <h3 class="text-center glow2">Write down your email below<br>and we will notice you</h3>
+                <div>
+                    <form action="" method="post" class="form-inline text-center">
+                        {% csrf_token %}
 
-                    </div>
+                        <div class="form-group">
+                            <label class="glow-label" for="">Your Email: </label>
+                            <input type="email" name="{{ form.email.email }}" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="glow-label" for="">Your Name: </label>
+                            <input type="text" name="{{ form.name.name }}" class="form-control last-field">
+
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-
+</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 </html>

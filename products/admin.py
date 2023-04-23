@@ -2,34 +2,37 @@ from django.contrib import admin
 from .models import *
 
 
-class ProductImageInline(admin.TabularInline):
+class ProductsImageInline(admin.TabularInline):
     model = ProductImage
     extra = 0
 
 
-class ProductCategoryAdmin(admin.ModelAdmin):
-    list_display = [field.name for field in ProductCategory._meta.fields]
+class ProductsAdmin(admin.ModelAdmin):
+    list_display = [field.name for field in Products._meta.fields]
+    inlines = [ProductsImageInline]
 
     class Meta:
-        model = ProductCategory
-
-admin.site.register(ProductCategory, ProductCategoryAdmin)
+        model = Products
 
 
-class ProductAdmin (admin.ModelAdmin):
-    list_display = [field.name for field in Product._meta.fields]
-    inlines = [ProductImageInline]
+admin.site.register(Products, ProductsAdmin)
+
+
+class ProductsCategoryAdmin(admin.ModelAdmin):
+    list_display = [field.name for field in ProductsCategory._meta.fields]
 
     class Meta:
-        model = Product
-
-admin.site.register(Product, ProductAdmin)
+        model = ProductsCategory
 
 
-class ProductImageAdmin (admin.ModelAdmin):
+admin.site.register(ProductsCategory, ProductsCategoryAdmin)
+
+
+class ProductImageAdmin(admin.ModelAdmin):
     list_display = [field.name for field in ProductImage._meta.fields]
 
     class Meta:
         model = ProductImage
+
 
 admin.site.register(ProductImage, ProductImageAdmin)
