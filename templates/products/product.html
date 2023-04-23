@@ -22,8 +22,8 @@
                     </p>
                 </div>
                 <div>
-                      <!-- Nav tabs -->
-                      <ul class="nav nav-tabs" role="tablist">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active">
                             <a href="#description" aria-controls="home" role="tab" data-toggle="tab">
                                 Описание
@@ -34,12 +34,14 @@
                                 Доставка
                             </a>
                         </li>
-                        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
-                        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
-                      </ul>
+                        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab"
+                                                   data-toggle="tab">Messages</a></li>
+                        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab"
+                                                   data-toggle="tab">Settings</a></li>
+                    </ul>
 
-                      <!-- Tab panes -->
-                      <div class="tab-content product-description-tabs">
+                    <!-- Tab panes -->
+                    <div class="tab-content product-description-tabs">
                         <div role="tabpanel" class="tab-pane active" id="description">
                             {{ product.description }}
                         </div>
@@ -48,24 +50,25 @@
                         </div>
                         <div role="tabpanel" class="tab-pane" id="messages">...</div>
                         <div role="tabpanel" class="tab-pane" id="settings">...</div>
-                      </div>
+                    </div>
                 </div>
                 <div>
-                    <form id="form_buying_product" class="form-inline" action="{% url 'basket_adding' %}">{% csrf_token %}
+                    <form id="form_buying_product" class="form-inline"
+                          action="{% url 'basket_adding' %}">{% csrf_token %}
                         <div class="form-group">
-                             <input type="number" class="form-control" name="number" id="number">
+                            <input type="number" class="form-control" name="number" id="number">
                         </div>
 
 
-                            <div class="form-group">
-                                <button type="submit" id="submit_btn" class="btn btn-success btn-buy"
-                                    data-product_id = "{{ product.id }}"
-                                    data-name ="{{ product.name }}"
-                                    data-price ="{{ product.price }}"
-                                >
-                                    Купить
-                                </button>
-                            </div>
+                        <div class="form-group">
+                            <button type="submit" id="submit_btn" class="btn btn-success btn-buy"
+                                    data-product_id="{{ product.id }}"
+                                    data-name="{{ product.name }}"
+                                    data-price="{{ product.price }}"
+                            >
+                                Купить
+                            </button>
+                        </div>
 
                     </form>
                 </div>

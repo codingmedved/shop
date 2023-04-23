@@ -1,66 +1,69 @@
 <!-- Static navbar -->
-    <nav class="navbar navbar-default navbar-top">
-        df
-    </nav>
-    <nav class="navbar navbar-default navbar-main">
-      <div class="container">
+<nav class="navbar navbar-default navbar-top">
+    df
+</nav>
+<nav class="navbar navbar-default navbar-main">
+    <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Project name</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Домой</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-                <div class="basket-container">
-                    <a href="">Корзина <span id="basket_total_amount"></span><span id="basket_total_nmb">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Домой</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <div class="basket-container">
+                        <a href="">Корзина <span id="basket_total_amount"></span><span id="basket_total_nmb">
                         {% if products_total_nmb %}
                             ({{ products_total_nmb }})
                         {% else %}
                             (0)
                         {% endif %}
                     </span></a>
-                    <div class="basket-items hidden">
-                        <ul class="">
-                            {% for product_in_basket in products_in_basket %}
+                        <div class="basket-items hidden">
+                            <ul class="">
+                                {% for product_in_basket in products_in_basket %}
+                                    <li>
+                                        {{ product_in_basket.product.name }} {{ product_in_basket.nmb }} шт.
+                                        по {{ product_in_basket.price_per_item }} грн.
+                                        <a class="delete-item" href=""
+                                           data-product_id="{{ product_in_basket.id }}">x</a>
+                                    </li>
+                                {% endfor %}
                                 <li>
-                                    {{ product_in_basket.product.name }} {{ product_in_basket.nmb }} шт.
-                                    по {{ product_in_basket.price_per_item }} грн.
-                                    <a class="delete-item" href="" data-product_id="{{ product_in_basket.id }}">x</a>
+                                    <a href="{% url 'checkout' %}">
+                                        Оформить заказ
+                                    </a>
                                 </li>
-                            {% endfor %}
-                            <li>
-                                <a href="{% url 'checkout'  %}">
-                                    Оформить заказ
-                                </a>
-                            </li>
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </li>
+                </li>
 
-          </ul>
+            </ul>
         </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+    </div>
+</nav>

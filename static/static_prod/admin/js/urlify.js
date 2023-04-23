@@ -1,5 +1,5 @@
 /*global XRegExp*/
-(function() {
+(function () {
     'use strict';
 
     var LATIN_MAP = {
@@ -118,7 +118,7 @@
     ];
 
     var Downcoder = {
-        'Initialize': function() {
+        'Initialize': function () {
             if (Downcoder.map) {  // already made
                 return;
             }
@@ -143,7 +143,7 @@
 
     function downcode(slug) {
         Downcoder.Initialize();
-        return slug.replace(Downcoder.regex, function(m) {
+        return slug.replace(Downcoder.regex, function (m) {
             return Downcoder.map[m];
         });
     }
@@ -175,5 +175,6 @@
         s = s.toLowerCase();               // convert to lowercase
         return s.substring(0, num_chars);  // trim to first num_chars chars
     }
+
     window.URLify = URLify;
 })();
