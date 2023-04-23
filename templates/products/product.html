@@ -1,76 +1,78 @@
 {% extends 'base.html' %}
 {% load static %}
 
+
 {% block content %}
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                {% for image in product.productimage_set.all %}
+                {% for image_item in product.productimage_set.all %}
                     <div class="product-image-item">
-                        <img src="{{ image.image.url }}" alt="{{ product.name }}" class="img-rounded">
+                        <img src="{{ image_item.image.url }}" class="img-responsive">
                     </div>
                 {% endfor %}
             </div>
-
             <div class="col-lg-6">
                 <h1 class="text-center">
                     {{ product.name }}
                 </h1>
-
-                <div>
-                    <p>Price: {{ product.price }}</p>
+                <div class="">
+                    <p>
+                        Price: {{ product.price }}
+                    </p>
                 </div>
+                <div>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#description" aria-controls="home" role="tab" data-toggle="tab">
+                                Описание
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#delivery" aria-controls="profile" role="tab" data-toggle="tab">
+                                Доставка
+                            </a>
+                        </li>
+                        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab"
+                                                   data-toggle="tab">Messages</a></li>
+                        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab"
+                                                   data-toggle="tab">Settings</a></li>
+                    </ul>
 
-                <div class="tabbable-panel">
-                    <div class="tabbable-line">
-                        <ul class="nav nav-tabs ">
-                            <li class="active">
-                                <a href="#description" data-toggle="tab">
-                                    Tab 1
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#delivery" data-toggle="tab">
-                                    Tab 2
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="tab-content one-product-content-text">
-                            <div class="tab-pane active" id="description">
-                                <p>
-                                    {{ product.description }}
-                                </p>
-                            </div>
-                            <div class="tab-pane" id="delivery">
-                                <p>
-                                <h3>Delivery - it`s Simple and Fast! </h3>
-                                <p>How to get your order:</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda atque
-                                    beatae
-                                    cum iste maiores neque nesciunt obcaecati odio optio, perspiciatis
-                                    praesentium
-                                    rerum sequi unde veritatis vitae. Autem cum non veritatis!</p>
-                                </p>
-                            </div>
+                    <!-- Tab panes -->
+                    <div class="tab-content product-description-tabs">
+                        <div role="tabpanel" class="tab-pane active" id="description">
+                            {{ product.description }}
                         </div>
+                        <div role="tabpanel" class="tab-pane" id="delivery">
+                            <h3>Как мы делаем доставку</h3>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="messages">...</div>
+                        <div role="tabpanel" class="tab-pane" id="settings">...</div>
                     </div>
                 </div>
-
                 <div>
-                    <form action="{% url 'basket_adding' %}" id="form_ordering_product" class="form-inline">
-                        {% csrf_token %}
-                        <input type="number" class="form-control" value="1" id="number">
-                        <button type="submit" class="btn btn-success" id="submit_btn"
-                                data-product-id='{{ product.id }}'
-                                data-product-name='{{ product.name }}'
-                                data-product-price='{{ product.price }}'>Add to Cart
-                        </button>
+                    <form id="form_buying_product" class="form-inline"
+                          action="{% url 'basket_adding' %}">{% csrf_token %}
+                        <div class="form-group">
+                            <input type="number" class="form-control" name="number" id="number">
+                        </div>
+
+
+                        <div class="form-group">
+                            <button type="submit" id="submit_btn" class="btn btn-success btn-buy"
+                                    data-product_id="{{ product.id }}"
+                                    data-name="{{ product.name }}"
+                                    data-price="{{ product.price }}"
+                            >
+                                Купить
+                            </button>
+                        </div>
+
                     </form>
-
                 </div>
-
             </div>
         </div>
     </div>
-
 {% endblock %}

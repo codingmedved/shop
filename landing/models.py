@@ -1,13 +1,13 @@
 from django.db import models
 
 
-class Subscribers(models.Model):
+class Subscriber(models.Model):
     email = models.EmailField()
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=128)
 
     def __str__(self):
-        return 'Id: %s, Login: %s' % (self.id, self.name)
+        return "Пользователь %s %s" % (self.name, self.email,)
 
     class Meta:
-        verbose_name = 'Subscriber'
-        verbose_name_plural = 'Subscribers'
+        verbose_name = 'MySubscriber'
+        verbose_name_plural = 'A lot of Subscribers'

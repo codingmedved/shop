@@ -18,14 +18,14 @@ admin.site.register(Status, StatusAdmin)
 
 
 class OrderAdmin(admin.ModelAdmin):
-    list_display = [field.name for field in Orders._meta.fields]
+    list_display = [field.name for field in Order._meta.fields]
     inlines = [ProductInOrderInline]
 
     class Meta:
-        model = Orders
+        model = Order
 
 
-admin.site.register(Orders, OrderAdmin)
+admin.site.register(Order, OrderAdmin)
 
 
 class ProductInOrderAdmin(admin.ModelAdmin):

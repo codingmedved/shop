@@ -1,7 +1,8 @@
+<!-- Static navbar -->
 <nav class="navbar navbar-default navbar-top">
-    Additional info
+    df
 </nav>
-<nav class="navbar navbar-default navbar-static-top">
+<nav class="navbar navbar-default navbar-main">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
@@ -15,7 +16,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/">Home</a></li>
+                <li class="active"><a href="/">Домой</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li class="dropdown">
@@ -34,32 +35,34 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <div class="cart-container">
-                        <a href="{% url 'checkout' %}">Cart
-                            <span id="cart_total_numb">
-                                {% if products_total_nmb %}
-                                    (Positions: {{ products_total_nmb }})
-                                {% else %}
-                                    (0)
-                                {% endif %}
-
-                            </span>
-                        </a>
-                        <div class="cart-items hidden">
-                            <ul>
-                                {% if products_in_basket %}
-                                    {% for product_in_basket in products_in_basket %}
-                                        <li>
-                                            {{ product_in_basket.product.name }} x{{ product_in_basket.number }}
-                                            Total: {{ product_in_basket.total_price }} mon
-                                            <a class="delete-item" data-product_id='{{ product_in_basket.id }}' href="">x</a>
-                                        </li>
-                                    {% endfor %}
-                                {% endif %}
+                    <div class="basket-container">
+                        <a href="">Корзина <span id="basket_total_amount"></span><span id="basket_total_nmb">
+                        {% if products_total_nmb %}
+                            ({{ products_total_nmb }})
+                        {% else %}
+                            (0)
+                        {% endif %}
+                    </span></a>
+                        <div class="basket-items hidden">
+                            <ul class="">
+                                {% for product_in_basket in products_in_basket %}
+                                    <li>
+                                        {{ product_in_basket.product.name }} {{ product_in_basket.nmb }} шт.
+                                        по {{ product_in_basket.price_per_item }} грн.
+                                        <a class="delete-item" href=""
+                                           data-product_id="{{ product_in_basket.id }}">x</a>
+                                    </li>
+                                {% endfor %}
+                                <li>
+                                    <a href="{% url 'checkout' %}">
+                                        Оформить заказ
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </li>
+
             </ul>
         </div><!--/.nav-collapse -->
     </div>

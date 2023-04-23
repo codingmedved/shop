@@ -1,27 +1,27 @@
 <div class="col-lg-3">
     <div class="product-item">
-        <div class="img">
-            <a href="{% url 'product' product_cat=product_image.product.category|lower product_id=product_image.product.id %}">
-                <img src="{{ product_image.image.url }}" alt="" class="img-responsive">
-                {% if product_image.product.discount %}
-                    <div class="discount-container">
-                        <span>{{ product_image.product.discount }}% OFF</span>
-                    </div>
-                {% endif %}
+        <div>
+            <a href="{% url 'product' product_image.product.id %}">
+                <img src="{{ product_image.image.url }}" class="img-responsive">
             </a>
         </div>
 
+        {% if product_image.product.discount %}
+            <div class="discount-container">
+                <span>{{ product_image.product.discount }}%</span>
+            </div>
+        {% endif %}
+
         <h4>{{ product_image.product.name }}</h4>
-        {#<p>{{ product.description | truncatechars:100 }}</p>#}
-        <p>{{ product_image.product.short_description }}</p>
-
-        <div class="price">
-            {{ product_image.product.price }} mon
+        <p>
+            {{ product_image.product.description|truncatechars_html:70 }}
+        </p>
+        <div>
+            {{ product_image.product.price }} UAH
         </div>
-
-        <div class="add-to-cart-btn">
+        <div class="add-to-card-btn">
             <button class="btn btn-success">
-                Add to cart
+                Добавить в корзину
             </button>
         </div>
     </div>
