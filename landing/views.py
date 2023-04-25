@@ -5,7 +5,7 @@ from products.models import *
 
 def landing(request):
     name = "CodingMedved"
-    current_day = "03.01.2017"
+    current_day = "24.04.2023"
     form = SubscriberForm(request.POST or None)
 
     if request.method == "POST" and form.is_valid():
