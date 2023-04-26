@@ -87,7 +87,7 @@ $(document).ready(function(){
     function calculatingBasketAmount(){
         var total_order_amount = 0;
         $('.total-product-in-basket-amount').each(function() {
-            total_order_amount = total_order_amount + parseFloat($(this).text());
+            total_order_amount += parseFloat($(this).text());
         });
         console.log(total_order_amount);
         $('#total_order_amount').text(total_order_amount.toFixed(2));
