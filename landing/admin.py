@@ -4,7 +4,7 @@ from .models import *
 
 class SubscriberAdmin (admin.ModelAdmin):
     # list_display = ["name", "email"]
-    list_display = [field.name for field in Subscriber._meta.fields]
+    list_display = [field.name for field in Subscribers._meta.fields]
     list_filter = ['name',]
     search_fields = ['name', 'email']
 
@@ -18,6 +18,6 @@ class SubscriberAdmin (admin.ModelAdmin):
 	# search_fields = ['category', 'subCategory', 'suggestKeyword']
 
     class Meta:
-        model = Subscriber
+        model = Subscribers
 
-admin.site.register(Subscriber, SubscriberAdmin)
+admin.site.register(Subscribers, SubscriberAdmin)
